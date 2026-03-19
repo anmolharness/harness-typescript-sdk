@@ -1,13 +1,28 @@
 # Harness TypeScript SDK
 
+> ⚠️ **Disclaimer**: This is an **unofficial, community-maintained** TypeScript SDK for Harness Platform API.
+> For official SDKs, visit https://github.com/harness
+
 **Complete TypeScript SDK for the Harness Platform API** with **102+ resources** covering 100% of major Harness capabilities.
 
 Based on the official [Harness Go SDK](https://github.com/harness/harness-go-sdk) structure, translated to idiomatic TypeScript.
 
 ## Installation
 
+### From GitHub Packages
+
 ```bash
-npm install harness-typescript-sdk
+# Install from GitHub Packages
+npm install @anmolharness/harness-typescript-sdk
+
+# Or install directly from GitHub
+npm install github:anmolharness/harness-typescript-sdk
+```
+
+For GitHub Packages, create a `.npmrc` file in your project:
+
+```
+@anmolharness:registry=https://npm.pkg.github.com
 ```
 
 ## Quick Start

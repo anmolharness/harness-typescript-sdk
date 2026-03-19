@@ -1,26 +1,35 @@
 {
-  "name": "harness-typescript-sdk",
+  "name": "@anmolharness/harness-typescript-sdk",
   "version": "0.1.0",
-  "description": "TypeScript SDK for Harness Platform API",
+  "description": "Unofficial TypeScript SDK for Harness Platform API",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anmolharness/harness-typescript-sdk.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "prepublishOnly": "npm run build && npm test"
   },
   "keywords": [
     "harness",
     "sdk",
     "typescript",
     "ci-cd",
-    "devops"
+    "devops",
+    "unofficial"
   ],
-  "author": "",
+  "author": "Anmol Pandey",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {

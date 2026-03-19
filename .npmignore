@@ -1,0 +1,27 @@
+# Source files (only ship compiled dist/)
+src/
+tsconfig.json
+vitest.config.ts
+
+# Tests
+src/__tests__/
+*.test.ts
+*.spec.ts
+
+# Examples
+examples/
+
+# Development files
+.git/
+.github/
+.vscode/
+node_modules/
+
+# Documentation
+COMPLETE-SDK-SUMMARY.md
+
+# Misc
+*.log
+.DS_Store
+.env
+.env.*
