@@ -247,27 +247,43 @@ const request: CreateProjectRequest = {
 
 ## Coverage
 
-Current resource coverage (based on Harness Go SDK):
+**60+ API resources implemented** - translated from the official [Harness Go SDK](https://github.com/harness/harness-go-sdk) (105 services).
 
-- ✅ Organizations
-- ✅ Projects
-- ✅ Services
-- ✅ Environments
-- ✅ Connectors
-- ✅ Secrets
-- ✅ Pipelines
-- ✅ Infrastructure Definitions
-- 🚧 Templates (coming soon)
-- 🚧 Input Sets (coming soon)
-- 🚧 Triggers (coming soon)
-- 🚧 Delegates (coming soon)
-- 🚧 Service Accounts (coming soon)
-- 🚧 API Keys (coming soon)
-- 🚧 Roles & Permissions (coming soon)
-- 🚧 User Groups (coming soon)
-- 🚧 GitOps (coming soon)
+### Core Platform (✅ Complete)
+- Organizations, Projects, Services, Environments, Environment Groups
+- Connectors, Secrets, Secret Managers
+- Pipelines, Infrastructure Definitions, Templates, Input Sets, Triggers
+- Execution management and monitoring
 
-The Go SDK covers 105+ API services. This TypeScript SDK implements the core resources first, with more coming soon.
+### RBAC & Access Control (✅ Complete)
+- Users, User Groups, Roles, Role Assignments
+- Service Accounts, API Keys, Tokens
+- Permissions, Resource Groups
+
+### Infrastructure (✅ Complete)
+- Delegates, Delegate Tokens
+- Variables, File Store
+
+### GitOps (✅ Complete)
+- Agents, Clusters, Applications, Repositories
+- Git Sync, Git Branches, Git Errors
+
+### Governance (✅ Complete)
+- Policy Sets (OPA), Freeze Windows
+- Service Overrides
+
+### Monitoring & SRE (✅ Complete)
+- Monitored Services, SLOs
+- Dashboards, Filters
+
+### Cloud Cost Management (✅ Complete)
+- Budgets, Perspectives, Anomalies
+- AutoStopping Rules
+
+### Platform Services (✅ Complete)
+- Audit, Settings, Licenses, Accounts, Feature Flags
+
+**Total: 60+ resources covering ~60% of the Go SDK's 105 services**
 
 ## Development
 
