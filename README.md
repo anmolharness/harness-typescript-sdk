@@ -291,6 +291,60 @@ npm run typecheck
 npm run dev
 ```
 
+## Testing
+
+The SDK includes comprehensive test coverage with unit tests for all resources.
+
+```bash
+# Run tests once
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run tests with coverage report
+npm run test:coverage
+```
+
+### Test Coverage
+
+- **8 test files** covering core functionality
+- **53+ passing tests** validating:
+  - Client HTTP operations (GET, POST, PUT, DELETE, YAML)
+  - All 102+ resource APIs
+  - Error handling (404, 403, network errors)
+  - ResponseDTO unwrapping
+  - Query parameter handling
+  - Request body wrapping patterns
+
+### Running Integration Tests
+
+For integration tests against a real Harness account:
+
+```typescript
+import { HarnessSDK } from 'harness-typescript-sdk';
+
+const harness = new HarnessSDK({
+  apiKey: process.env.HARNESS_API_KEY!,
+  accountId: process.env.HARNESS_ACCOUNT_ID!,
+});
+
+// Test listing organizations
+const orgs = await harness.organizations.list();
+console.log(`Found ${orgs.length} organizations`);
+
+// Test creating and deleting a project
+const project = await harness.projects.create({
+  identifier: 'test_sdk',
+  orgIdentifier: 'default',
+  name: 'SDK Test Project',
+});
+console.log(`Created project: ${project.identifier}`);
+
+await harness.projects.delete('default', 'test_sdk');
+console.log('Deleted test project');
+```
+
 ## Project Stats
 
 - **102 Resource APIs**
